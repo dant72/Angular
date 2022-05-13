@@ -14,7 +14,7 @@ export class Heroes {
     this.add("Tomson");
   }
 
-  add(name: string) : void {
+  public add(name: string) : void {
     this.heroes.push(new Hero(Heroes.id++, name));
   }
 
@@ -24,5 +24,9 @@ export class Heroes {
 
   public getHero(id: number): Hero | undefined {
     return this.heroes.find(i => i.id == id);
+  }
+
+  public update(hero: Hero) {
+    this.heroes.find(i => i.id == hero.id)?.setName(hero.name);
   }
 }

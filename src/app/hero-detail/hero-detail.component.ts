@@ -8,9 +8,9 @@ import { Heroes } from '../Heroes';
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
-  styleUrls: [ './hero-detail.component.css' ]
+  styleUrls: ['./hero-detail.component.css']
 })
-export class HeroDetailComponent{
+export class HeroDetailComponent {
   hero: Hero | undefined;
 
   constructor(
@@ -31,8 +31,9 @@ export class HeroDetailComponent{
     this.location.back();
   }
 
-  public updateHero(name: string) {
-    if (this.hero)
-    this.hero.name = name;
+  public updateHero() {
+    if (this.hero) {
+      this.heroService.update(this.hero);
+    }
   }
 }
