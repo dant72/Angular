@@ -1,0 +1,44 @@
+ul {
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  display: inline;
+}
+
+li div {
+  display: block;
+  margin: 15px 0px;
+}
+
+li div div{
+  display: inline;
+}
+
+.id
+{
+    color: dimgray;
+    background-color: gainsboro;
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.name {
+  color: white;
+  background-color: cadetblue;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+  width: 200px;
+}
+
+li div:hover {
+    color: blue;
+}
+
+button
+{
+    padding: 5px 10px;
+}
+
+

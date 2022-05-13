@@ -4,12 +4,13 @@ import { Heroes } from '../Heroes'
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css' ]
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
 })
-export class DashboardComponent{
+export class HeroesComponent {
 
   heroes: Heroes;
+  currentHero: Hero | undefined;
 
   constructor(private heroService: Heroes) {
     this.heroes = heroService;
@@ -17,5 +18,9 @@ export class DashboardComponent{
 
   public getHeroes(): Hero[] {
     return this.heroes.getHeroes();
+  }
+
+  public Click(hero: Hero) {
+    this.currentHero = hero;
   }
 }

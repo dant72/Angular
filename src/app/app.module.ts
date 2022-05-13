@@ -12,12 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { Heroes } from './Heroes';
 import { CommonModule } from '@angular/common';
+import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forRoot([
+      { path: 'heroes', component: HeroesComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'detail/:id', component: HeroDetailComponent }
     ])

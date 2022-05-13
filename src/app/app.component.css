@@ -3,3 +3,27 @@
     font-size: large;
     color: gold;
 }
+
+a {
+  background-color: gainsboro;
+  border-radius: 2px;
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  width: 100px;
+  min-width: 50px;
+  box-sizing: border-box;
+  /* flexbox */
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin: 10px;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}

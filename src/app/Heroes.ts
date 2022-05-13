@@ -12,6 +12,8 @@ export class Heroes {
     this.add("Tom");
     this.add("Boris");
     this.add("Tomson");
+    this.add("Bob");
+    this.add("Rob");
   }
 
   public add(name: string) : void {
