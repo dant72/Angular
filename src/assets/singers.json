@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "Полина",
+    "surname": "Гагарина",
+    "image": "./assets/images/polina.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Валерий",
+    "surname": "Меладзе",
+    "image": "./assets/images/meladze.jpg"
+  }
+]
+

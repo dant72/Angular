@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Heroes } from './Heroes';
 import { CommonModule } from '@angular/common';
 import { HeroesComponent } from './heroes/heroes.component';
+import { SingersService } from './services/singers.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { HeroesComponent } from './heroes/heroes.component';
       { path: 'detail/:id', component: HeroDetailComponent }
     ])
   ],
-  providers: [Heroes],
+  providers: [Heroes, SingersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

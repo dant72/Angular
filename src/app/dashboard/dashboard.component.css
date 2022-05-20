@@ -48,8 +48,22 @@ a {
     box-sizing: content-box;
   }
 }
-
+.zara {
+    align-items:center;
+}
+  .zara img {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
 a:hover {
   background-color: green;
   color: yellow;
+}
+
+.text {
+  align-items: center;
+  text-align:center;
+  margin: 20px;
+  font-size: 1rem;
 }

@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\D:\\Users\\turbo\\Source\\Repos\\Angular2",
+  "SelectedNode": "\\toh-anim.gif",
   "PreviewInSolutionExplorer": false
 }

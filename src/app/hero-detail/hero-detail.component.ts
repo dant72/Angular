@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Hero } from '../Hero';
-import { Heroes } from '../Heroes';
+import { SingersService } from '../services/singers.service';
+import { Singer } from '../Singer';
 
 @Component({
   selector: 'app-hero-detail',
@@ -11,29 +11,27 @@ import { Heroes } from '../Heroes';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent {
-  hero: Hero | undefined;
+  singer: Singer | undefined;
+  singers: Singer[] = [];
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: Heroes,
+    private singersService: SingersService,
     private location: Location
   ) {
-    this.hero = this.getHero();
+    this.singer = this.getSinter();
 
   }
 
-  getHero(): Hero | undefined {
+  getSinter(): Singer | undefined {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!);
-    return this.heroService.getHero(id);
+    this.singersService.getSingers().subscribe(data => 
+      this.singers = data);
+
+    return this.singers.find(i => i.id == id);
   }
 
   goBack(): void {
     this.location.back();
-  }
-
-  public updateHero() {
-    if (this.hero) {
-      this.heroService.update(this.hero);
-    }
   }
 }

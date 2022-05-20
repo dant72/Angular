@@ -4,6 +4,13 @@
     color: gold;
 }
 
+body {
+  color: #7c795d;
+  font-family: ‘Trocchi’, serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+
 a {
   background-color: gainsboro;
   border-radius: 2px;
@@ -13,7 +20,7 @@ a {
   display: inline-block;
   color: black;
   text-align: center;
-  width: 100px;
+  width: 140px;
   min-width: 50px;
   box-sizing: border-box;
   /* flexbox */

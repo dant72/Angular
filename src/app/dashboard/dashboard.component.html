@@ -1,7 +1,17 @@
-<h2>Top Heroes</h2>
+<h2>Международный музыкальный фестиваль «Жара»</h2>
+<div class="zara">
+  <img src="assets/images/zara.jpeg" />
+</div>
+<div class="text">
+  <b>17 мая 2022 года</b> в <b>Crocus City Hall</b> состоится V ежегодная музыкальная премия<br/>
+  <b>"ЖАРА Music Awards"</b> - одно из самых ожидаемых музыкальных событий года.
+  <p>Победителей юбилейной музыкальной премии выберут открытым голосованием по итогам 2021 года. На церемонии запланировано более 20 музыкальных номеров и выступления одних из самых популярных артистов и хитмейкеров года:</p>
+</div>
+
+
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes.getHeroes().slice(0, 3)"
-     routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
+  <a *ngFor="let singer of singers.slice(0, 3)"
+     routerLink="/detail/{{singer.id}}">
+    {{singer.name}} {{singer.surname}}
   </a>
 </div>
