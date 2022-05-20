@@ -1,16 +1,19 @@
-<h2>Heroes</h2>
+<h2>Исполнители</h2>
 
 <ul>
-  <li *ngFor="let hero of heroes.getHeroes()" (click)="Click(hero)">
+  <li *ngFor="let singer of singers" (click)="Click(singer)">
     <div class="block">
-      <div class="id">{{hero.id}} </div><div class="name">{{hero.name}}</div>
+      <div class="id">{{singer.id}} </div><div class="name">{{singer.name}} {{singer.surname}}</div>
     </div>
   </li>
 </ul>
 
-<div *ngIf="currentHero">
+<div *ngIf="singer">
   <div>
-    <h1><b>{{currentHero.name}}</b> is my hero!</h1>
+    <br />
+    <br />
+    <h1><b>{{singer.name}} {{singer.surname}}</b></h1>
+    <img src="{{singer.image}}" />
   </div>
-  <button type="button" routerLink="/detail/{{currentHero.id}}">view details</button>
+  <button type="button" routerLink="/detail/{{singer.id}}">view details</button>
 </div>

@@ -1,8 +1,4 @@
-<h2>{{singer.name}} Details</h2>
-<div><label>id: </label>{{singer.id}}</div>
-<div>
-  <label for="hero-name">Hero name: </label>
-  <label id="hero-name" name="name" [(ngModel)]="singer.name" placeholder="Имя исполнителя" ></label>
-</div>
+<h2>{{singer.name}} {{singer.surname}}</h2>
+<div><img src="{{singer.image}}" /></div>
+<div class="discription"><p>{{singer.discription}}</p></div>
 <button type="button" (click)="goBack()">Back</button>
-

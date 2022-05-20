@@ -23,3 +23,8 @@ button:disabled {
   color: #ccc;
   cursor: auto;
 }
+
+.discription
+{
+  max-width: 500px;
+}

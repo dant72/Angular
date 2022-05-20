@@ -10,7 +10,7 @@
 
 
 <div class="heroes-menu">
-  <a *ngFor="let singer of singers.slice(0, 3)"
+  <a *ngFor="let singer of singers.slice(0, 2)"
      routerLink="/detail/{{singer.id}}">
     {{singer.name}} {{singer.surname}}
   </a>

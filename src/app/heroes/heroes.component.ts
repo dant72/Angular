@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Hero } from '../Hero';
-import { Heroes } from '../Heroes'
+import { SingersService } from '../services/singers.service';
+import { Singer } from '../Singer';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,18 +9,15 @@ import { Heroes } from '../Heroes'
 })
 export class HeroesComponent {
 
-  heroes: Heroes;
-  currentHero: Hero | undefined;
+  public singer: Singer | undefined;
+  public singers: Singer[] = [];
 
-  constructor(private heroService: Heroes) {
-    this.heroes = heroService;
+  constructor(private singersService: SingersService) 
+  {
+    this.singersService.getSingers().subscribe(data => this.singers = data);
   }
 
-  public getHeroes(): Hero[] {
-    return this.heroes.getHeroes();
-  }
-
-  public Click(hero: Hero) {
-    this.currentHero = hero;
+  public Click(singer: Singer) {
+    this.singer = singer;
   }
 }

@@ -20,15 +20,12 @@ export class HeroDetailComponent {
     private location: Location
   ) {
     this.singer = this.getSinter();
-
   }
 
   getSinter(): Singer | undefined {
-    const id = parseInt(this.route.snapshot.paramMap.get('id')!);
-    this.singersService.getSingers().subscribe(data => 
-      this.singers = data);
+    let id = parseInt(this.route.snapshot.paramMap.get('id')!);
 
-    return this.singers.find(i => i.id == id);
+    return this.singersService.getSinger(id);
   }
 
   goBack(): void {

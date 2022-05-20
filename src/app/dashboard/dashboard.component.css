@@ -1,4 +1,8 @@
 /* DashboardComponent's private CSS styles */
+body
+{
+  color: #F69D9D;
+}
 
 h2 {
   text-align: center;
@@ -23,13 +27,13 @@ h2 {
 }
 
 a {
-  background-color: lightgreen;
+  background-color: #F69D9D;
   border-radius: 2px;
   padding: 1rem;
   font-size: 1.2rem;
   text-decoration: none;
   display: inline-block;
-  color: navy;
+  color: #FFEAB6;
   text-align: center;
   width: 100%;
   min-width: 70px;
@@ -57,8 +61,8 @@ a {
     margin: auto;
   }
 a:hover {
-  background-color: green;
-  color: yellow;
+  background-color: #C0FFC2;
+  color: #F69D9D;
 }
 
 .text {
